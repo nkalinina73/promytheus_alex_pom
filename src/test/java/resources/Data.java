@@ -13,4 +13,8 @@ public class Data {
 
     public String email = "auto.qauber@mailinator.com";
     public String psw = "qwe123";
+
+    public String emailURL = "http://www.mailinator.com/v2/inbox.jsp?zone=public&query=promy7";
+    public String email2 = "promy7@mailinator.com";
+
 }

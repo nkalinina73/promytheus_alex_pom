@@ -24,7 +24,7 @@ public class CreateNewTalent_New_Test extends BaseTest {
             driver.navigate().refresh();
         }
         // Thread.sleep(1000);
-        pR.loginPage.loginEmail().sendKeys(pR.data.email);
+        pR.loginPage.loginEmail().sendKeys(pR.data.email2);
         pR.loginPage.loginPsw().sendKeys(pR.data.psw);
         pR.loginPage.loginButton().click();
     }
@@ -39,7 +39,7 @@ public class CreateNewTalent_New_Test extends BaseTest {
         pR.talentPage.buttonNew().click();
         Thread.sleep(2000);
         pR.talentPage.categoryArrowDown().click();
-        pR.talentPage.categoryInput().sendKeys("Comedy");
+        pR.talentPage.categoryInput().sendKeys("Science");
         pR.talentPage.categoryComedy().click();
         Thread.sleep(2000);
         pR.talentPage.buttonNext().click();
@@ -51,7 +51,7 @@ public class CreateNewTalent_New_Test extends BaseTest {
         Robot robot = new Robot();
         robot.setAutoDelay(2000);
 
-        StringSelection sSelection = new StringSelection("C:\\Users\\Natalia\\Pictures\\cat.jpg");
+        StringSelection sSelection = new StringSelection("C:\\Users\\Natalia\\Pictures\\images.jpg");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sSelection, null);
         robot.setAutoDelay(2000);
         //sending the path to image
@@ -65,7 +65,7 @@ public class CreateNewTalent_New_Test extends BaseTest {
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
         Thread.sleep(2000);
-        pR.talentPage.radioButton().click();
+        pR.talentPage.radioButtonFemale().click();
         pR.talentPage.address().sendKeys(new Faker().address().streetAddress());
         pR.talentPage.city().sendKeys(new Faker().address().city());
         pR.talentPage.state().sendKeys(new Faker().address().state());
@@ -77,7 +77,7 @@ public class CreateNewTalent_New_Test extends BaseTest {
         Thread.sleep(2000);
         pR.talentPage.comeBackLater().click();
         Thread.sleep(3000);
-        pR.talentPage.buttonOK();
+        pR.talentPage.buttonOK().click();
 
     }
 

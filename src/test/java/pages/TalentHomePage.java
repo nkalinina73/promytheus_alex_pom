@@ -8,7 +8,9 @@ public class TalentHomePage extends BasePage {
     public TalentHomePage (WebDriver driver){
         this.driver = driver;
     }
-
+    public WebElement buttonEdit (){
+        return driver.findElement(By.xpath("/html/body/app/ui-view/public-area/div/ui-view/talents-section/div/section/div/div/spinner-container/div[1]/div/div[2]/table/tbody/tr[1]/td[9]/a[1]/em"));
+    }
     public WebElement appLogo(){
         return driver.findElement(By.xpath("/html/body/app/ui-view/public-area/div/header/nav/div[1]/a/div[1]/img"));
     }
@@ -48,6 +50,12 @@ public class TalentHomePage extends BasePage {
     public WebElement radioButton(){
         return driver.findElement(By.xpath("//*[@id=\"talentForm\"]/wizard-form/div/div[1]/div[1]/fieldset[2]/div/div/div[3]/div/label[3]/span"));
     }
+    public WebElement radioButtonMale(){
+        return driver.findElement(By.xpath("//*[@id=\"talentForm\"]/wizard-form/div/div[1]/div[1]/fieldset[2]/div/div/div[3]/div/label[1]/span"));
+    }
+    public WebElement radioButtonFemale(){
+        return driver.findElement(By.xpath("//*[@id=\"talentForm\"]/wizard-form/div/div[1]/div[1]/fieldset[2]/div/div/div[3]/div/label[2]/span"));
+    }
     public WebElement address(){
         return driver.findElement(By.xpath("//*[@id=\"address\"]"));
     }
@@ -72,6 +80,7 @@ public class TalentHomePage extends BasePage {
     public WebElement buttonOK(){
         return driver.findElement(By.xpath("/html/body/div[2]/div[7]/div/button"));
     }
+    //html/body/div[2]/div[7]/div/button
      public WebElement enterEmail(){
         return driver.findElement(By.xpath("//*[@id=\"talentForm\"]/wizard-form/div/div[1]/div[1]/fieldset[2]/div/div/div[12]/div[1]/input"));
     }
